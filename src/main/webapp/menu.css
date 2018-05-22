@@ -1,0 +1,19 @@
+body
+{
+    background-image:url('bglogo.png');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+}
+
+.button {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: white;
+    border: 2px solid #e7e7e7;
+	cursor: pointer;
+}
+
+.button:hover {background-color: #e7e7e7;}
+

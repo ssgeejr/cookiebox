@@ -1,0 +1,20 @@
+https://dlawrence.wordpress.com/2014/06/25/get-started-with-bugzilla-fast-using-docker/	
+
+docker pull dklawren/docker-bugzilla
+
+
+mkdir -p /opt/bugzilla/cgroup
+chown -R devops:devops /opt/bugzilla
+
+docker run -d -t --privileged \
+    --name bugzilla \
+    --hostname bugzilla \
+    --publish 8881:80 \
+    --publish 2222:22 \
+    --volume /opt/bugzilla/cgroup:/sys/fs/cgroup:ro \
+    dklawren/docker-bugzilla
+
+
+http://192.168.1.102:8881/bugzilla/
+
+
