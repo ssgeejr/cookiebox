@@ -17,12 +17,12 @@
 <table align="center" style="width: 800px">
 	<tr>
 		<td align="center">
-			<img src="home.png" alt="Home Page"/>
+			<img src="home.png" alt="Home Page: Sign-Up"/>
 			<img src="details.png" alt="Details regarding the upcoming session"/>
 			<img src="laptop.png" alt="Setup Your Laptop for the Brown Bag Session"/><br>
 			
-			<img src="patrons.png" alt="Contact Information if you have questions"/>
-			<img src="contact.png" alt="Contact Information if you have questions"/>
+			<img src="patrons.png" alt="Those signed up"/>
+			<img src="contact.png" alt="Questions, Issues, Bugs & Support"/>
 		</td>
 	</tr>
 	<tr>
