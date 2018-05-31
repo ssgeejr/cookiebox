@@ -1,12 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  
   <groupId>itsa.sprint.com</groupId>
   <artifactId>cookiebox</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
   <name>cookiebox Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <build>
     <finalName>cookiebox</finalName>
   </build>
@@ -17,7 +19,6 @@
   </organization>
   <ciManagement>
   	<system>Jenkins</system>
-	<user>jenkins</user>
 	<url>http://1.1.1.1:8081/</url>
   </ciManagement>
   <scm>
@@ -25,7 +26,7 @@
   	<developerConnection>devops</developerConnection>
 	<url>http://1.1.1.1:8180/</url>
   </scm>
-  
+ 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -34,4 +35,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
 </project>
