@@ -1,6 +1,6 @@
-body
+﻿xx.body
 {
-    background-image:url('bglogo.png');
+    background-image:url('brownbag.png');
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center;
@@ -17,3 +17,11 @@ body
 
 .button:hover {background-color: #e7e7e7;}
 
+input {
+    background-color: #ffffe6;
+}
+
+// input[type=text] {
+//    background-color: #3CBC8D;
+//     color: white;
+// }
