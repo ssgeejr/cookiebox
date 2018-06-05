@@ -18,3 +18,66 @@ docker run -d -t --privileged \
 http://192.168.1.102:8881/bugzilla/
 
 
+A: developer checks code in,  Pull request is initiated, code reviewed, merge approved
+B) Merge triggers Jenkins, Jenkins tells IPC to build a Jenkins machine
+C) server spun up (may/may not happen - not required, but eventually we will want this feature - Plutonium does it, so I know it can be done) 
+D) Code is checked out, the appropriate build is done, tests are ran 
+E) Yammer notification that build is under way
+F) Nagios moniters build
+G) Success, image pushed to registry
+now test
+H) asks IPC for a build instance
+I) Jenkins spun up 
+J) image is pulled out of registry
+K) Yammer notified test is under way
+L) Nagios monitors containers during test
+M) image is tagged in registry
+... done
+... those are high level events
+there are many 'minor' events that are triggered. Such as Yammer is notified of build result, Solar is updated with build stats, Legal software validated source code for violations, Legal engine updated ... etc
+ 
+xxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxxxxxx
+
+Host github.com-devops
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/github-key
+
+Host github.com
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/github-key
+
+......................................................
+	
+git config --global user.email|user.name
+
+git config user.name "devops"
+git config user.email "devops@landline.com"
+......................................................
+$ git config user.name "jexchan"
+$ git config user.email "jexchan@gmail.com" 
+
+$ git config user.name "activehacker"
+$ git config user.email "jexlab@gmail.com" ......................................................
+#activehacker account
+Host github.com-activehacker
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_activehacker
+
+#jexchan account
+Host github.com-jexchan
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_jexchan
+	
+......................................................
+
+git remote set-url origin git@github.com:ssgeejr/theouterlimit.git
+
+......................................................
+
+docker build -t tomcat:cookie-1.0 -f Dockerfile-l1 .
+
+......................................................
