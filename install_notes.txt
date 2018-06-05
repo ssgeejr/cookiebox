@@ -36,6 +36,35 @@ M) image is tagged in registry
 ... those are high level events
 there are many 'minor' events that are triggered. Such as Yammer is notified of build result, Solar is updated with build stats, Legal software validated source code for violations, Legal engine updated ... etc
  
+<<<<<<< HEAD
+=======
+ 
+ -----------+++++++++++++++++++++++---------------------
+ 
+ You can fix this by exclusion of the embedded tomcat at the time of packaging by using exclusions in case of maven.
+
+Maven dependency of "spring-boot-starter-web" will look like
+
+   <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <exclusions>
+            <exclusion>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    
+OR ...
+    
+<dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.0.1</version>
+        <scope>provided</scope>
+</dependency>
+>>>>>>> master
 xxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxxxxxx
 
 Host github.com-devops
@@ -59,7 +88,14 @@ $ git config user.name "jexchan"
 $ git config user.email "jexchan@gmail.com" 
 
 $ git config user.name "activehacker"
+<<<<<<< HEAD
 $ git config user.email "jexlab@gmail.com" ......................................................
+=======
+$ git config user.email "jexlab@gmail.com" 
+
+......................................................
+
+>>>>>>> master
 #activehacker account
 Host github.com-activehacker
 	HostName github.com
@@ -78,6 +114,54 @@ git remote set-url origin git@github.com:ssgeejr/theouterlimit.git
 
 ......................................................
 
+<<<<<<< HEAD
 docker build -t tomcat:cookie-1.0 -f Dockerfile-l1 .
 
 ......................................................
+=======
+mvn -DskipTests=true clean package
+
+docker build -t tomcat:cookie-1.0 -f Dockerfile-l1 .
+
+ADD: will copy & explode
+COPY: will only make a copy within the image
+
+COPY cookiejar.war /usr/local/tomcat/webapps/cookiejar.war
+
+COPY app.war /usr/local/tomcat/webapps/app.war
+......................................................
+
+docker build -t cookiejar:1.0 .
+
+docker run --rm --name cookiejar -ti -p 8181:8080 cookiejar:1.0
+
+
+view-source:http://192.168.1.107:8181/cookiejar/cjservice
+
+......................................................
+
+
+Caused by: java.lang.IllegalArgumentException: Servlet mapping specifies an unknown servlet name cjservice
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> master

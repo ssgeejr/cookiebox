@@ -18,6 +18,14 @@
 	<tr>
 		<td align="center">
 			<img src="home.png" alt="Home Page: Sign-Up"/>
+<<<<<<< HEAD
+=======
+			<img src="details.png" alt="Details regarding the upcoming session"/>
+			<img src="laptop.png" alt="Setup Your Laptop for the Brown Bag Session"/><br>
+			
+			<img src="patrons.png" alt="Those signed up"/>
+			<img src="contact.png" alt="Questions, Issues, Bugs & Support"/>
+>>>>>>> master
 		</td>
 	</tr>
 	<tr>
