@@ -1,0 +1,14 @@
+Started by an SCM change
+[Office365connector] No webhooks to notify
+Building in workspace /var/jenkins_home/jobs/cookiebox/workspace
+ERROR: A Maven installation needs to be available for this project to be built.Either your server has no Maven installations defined, or the requested Maven version does not exist.
+[BFA] Scanning build for known causes...
+[BFA] No failure causes found
+[BFA] Done. 0s
+Started calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+[Office365connector] No webhooks to notify
+Notifying upstream projects of job completion
+Finished: FAILURE
