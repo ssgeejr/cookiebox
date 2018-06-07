@@ -12,7 +12,7 @@
 	String dynamicMenuResponse = "";
 	ObjectInputStream doGetResponse = null;
 	ObjectOutputStream doGetCall = null;
-	String cookieJarMockService = "http://192.168.1.107:9001/cookiejar/cjservice?one=one";
+	String cookieJarMockService = "http://192.168.1.107:9001/cookiejar/cjservice";
 	try{
 		String oauth_token = "97ad5c9517956ad86a5ac03ed9f08f88";
 		ArrayList<String> oauth = new ArrayList<String>();
