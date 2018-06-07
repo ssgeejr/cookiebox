@@ -31,7 +31,7 @@
 	}catch(Exception ex){
 		try{doGetResponse.close();}catch(Exception exa){}
 		try{doGetCall.close();}catch(Exception exb){}
-
+		ex.printStackTrace();
 		out.println("<font color=\"red\">");
 		StackTraceElement[] ste = ex.getStackTrace();
 		int counter = 0;
