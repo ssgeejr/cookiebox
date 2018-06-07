@@ -12,12 +12,13 @@
 	String dynamicMenuResponse = "";
 	ObjectInputStream doGetResponse = null;
 	ObjectOutputStream doGetCall = null;
+	String cookieJarMockService = "http://192.168.1.107:9001/cookiejar/cjservice?one=one";
 	try{
 		String oauth_token = "97ad5c9517956ad86a5ac03ed9f08f88";
 		ArrayList<String> oauth = new ArrayList<String>();
 		oauth.add(oauth_token);
-	//	http://192.168.1.107:9002/cookiebox/
-		URL dynamicMenu = new URL("http://192.168.1.107:9001/cookiejar/cjservice");
+	//	http://192.168.1.107:9002/cookiebox/		
+		URL dynamicMenu = new URL(cookieJarMockService);
 		HttpURLConnection servletConnection = (HttpURLConnection) dynamicMenu.openConnection();
 		servletConnection.setRequestMethod("GET");
 		servletConnection.setDoOutput(true);
@@ -29,6 +30,7 @@
 		dynamicMenuResponse = (String) doGetResponse.readObject();
 
 	}catch(Exception ex){
+		out.println("cookieJarMockService: " + cookieJarMockService);
 		try{doGetResponse.close();}catch(Exception exa){}
 		try{doGetCall.close();}catch(Exception exb){}
 		ex.printStackTrace();
