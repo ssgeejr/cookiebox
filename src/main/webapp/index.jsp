@@ -16,6 +16,7 @@
 		String oauth_token = "97ad5c9517956ad86a5ac03ed9f08f88";
 		ArrayList<String> oauth = new ArrayList<String>();
 		oauth.add(oauth_token);
+	//	http://192.168.1.107:9002/cookiebox/
 		URL dynamicMenu = new URL("http://192.168.1.107:9001/cookiejar/cjservice");
 		HttpURLConnection servletConnection = (HttpURLConnection) dynamicMenu.openConnection();
 		servletConnection.setRequestMethod("GET");

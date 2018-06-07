@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cookiebox:war exploded">
+    <output-path>$PROJECT_DIR$/target/cookiebox</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="cookiebox" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="C:\development\sprint\projects\cookiebox\target/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="cookiebox/web/Web" />
+    </root>
+  </artifact>
+</component>
