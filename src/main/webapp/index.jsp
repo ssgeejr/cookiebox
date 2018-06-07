@@ -27,9 +27,16 @@
 		doGetCall.writeObject(oauth);
 		doGetCall.flush();
 
+		BufferedReader in = new BufferedReader(new InputStreamReader(servletConnection.getInputStream()));
+		String inputLine;
+		while ((inputLine = in.readLine()) != null)
+			System.out.println(">> " + inputLine);
+		in.close();
+
+		/*
 		doGetResponse = new ObjectInputStream(servletConnection.getInputStream());
 		dynamicMenuResponse = (String) doGetResponse.readObject();
-
+		*/
 	}catch(Exception ex){
 		out.println("cookieJarMockService: " + cookieJarMockService);
 		try{doGetResponse.close();}catch(Exception exa){}
