@@ -6,7 +6,7 @@ Details coming soon ...
 ## Docker
 # Startup Script
 
-docker run --rm --name cookiebox --link cookiejar:cjar -ti -p 9002:8080 cookiebox:1.0
+docker run --rm --name cookiebox --link cookiejar:cjlink -ti -p 9002:8080 cookiebox:1.0
 
 docker run --rm --name cookiejar -ti -p 9001:8080 cookiejar:1.0
 
